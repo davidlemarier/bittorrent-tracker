@@ -302,8 +302,8 @@ Tracker.prototype._requestUdp = function(requestUrl, opts) {
 
 	var options = {
 		proxy: {
-			ipaddress: "localhost",
-			port: 1080,
+			ipaddress: self._opts.proxy.host,
+			port: self._opts.proxy.port,
 			type: 5,
 			command: "associate" // Since we are using associate, we must specify it here.
 		},
